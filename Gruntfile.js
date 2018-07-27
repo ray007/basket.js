@@ -14,7 +14,7 @@ module.exports = function( grunt ) {
 					' <%= _.pluck(pkg.licenses, "type").join(", ") %> License\n' +
 					'* Created by: <%= _.pluck(pkg.maintainers, "name").join(", ") %>\n' +
 					'* Contributors: <%= _.pluck(pkg.contributors, "name").join(", ") %>\n' +
-					'* Uses rsvp.js, https://github.com/tildeio/rsvp.js\n' +
+					'* Uses es6-promise.js, https://github.com/stefanpenner/es6-promise\n' +
 					'*/',
 				stripBanners: true
 			},
@@ -41,7 +41,7 @@ module.exports = function( grunt ) {
 					sourceMap: 'dist/basket.full.map'
 				},
 				files: {
-					'dist/basket.full.min.js': ['bower_components/rsvp/rsvp.min.js', 'dist/basket.js']
+					'dist/basket.full.min.js': ['node_modules/es6-promise/dist/es6-promise.auto.js', 'dist/basket.js']
 				}
 			}
 		},
